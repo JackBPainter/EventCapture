@@ -1,13 +1,52 @@
-body {
+* {
+  font-family: sans-serif;
+  color: rgb(5, 6, 96);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./images/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  padding-top: 15vw;
+  height: 17vw;
+  width: 45vw;
+}
+
+.arrow {
+  height: 10vw;
+  width: 17vw;
+}
+
+.attendees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 4vw;
+}
+
+.componentHeaders {
+  display: flex;
+  justify-content: center;
+  padding-top: 2vw;
+}
+
+.DataForm {
+  display: flex;
+  justify-content: center;
+}
+
+.emailInput {
+  padding-top: 4vw;
 }
