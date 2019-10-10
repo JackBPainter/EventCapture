@@ -51,6 +51,12 @@
   padding-top: 4vw;
 }
 
-.postcodeInput {
-  text-transform: uppercase;
+.postcode {
+  margin-right: 1vw;
+}
+
+.formConfirmButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
 }

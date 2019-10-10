@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../images/akkrooLogo.png";
-import arrow from "../images/arrow.png";
 import SecondButton from "./SecondButton";
 
 const FirstDataCaptureForm = props => {
@@ -24,11 +23,11 @@ const FirstDataCaptureForm = props => {
             defaultValue={props.email || emailText} 
             onChange={(e => setEmailText(e.target.value))}
           />
-          <SecondButton handleClick2={props.getCount} />
+          <SecondButton handleClick2={props.getCount} confirmedEmail={props.defaultValue} />
         </p>
       </form>
-      <div className="imageContainer">
-        <img className="arrow" src={arrow} alt="next page" />
+      <div className="formConfirmButton">
+        <button handleClick2={props.getCount}>next</button>
       </div>
     </div>
   );

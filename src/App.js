@@ -11,12 +11,14 @@ const App = () => {
   const [count, setCount] = useState(0);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [confirmedEmail, setConfirmedEmail] = useState('');
   const [postcode, setPostcode] = useState('');
   const [optIn, setOptIn] = useState('');
 
   const getCount = (props) => {
     setName(props.name);  
     if (props.email) setEmail(props.email);
+    setConfirmedEmail();
     setCount(count + 1);
 }
   const resetCount = () => {

@@ -9,20 +9,23 @@ const SecondDataCaptureForm = props => {
       </div>
       <div className="componentHeaders">
         <h2>
-          Please confirm your postcode and let us know if you're happy to
+          Please confirm your postcode and let us know <br />if you're happy to
           receive promotional emails
         </h2>
       </div>
       <form className="DataForm">
         <p className="emailInput">
           <input
+            className="postcode"
             type="string"
             pattern="(GIR 0AA|[A-PR-UWYZ]([0-9][0-9A-HJKPS-UW]?|[A-HK-Y][0-9][0-9ABEHMNPRV-Y]?) [0-9][ABD-HJLNP-UW-Z]{2})"
             placeholder="Please enter postcode"
           />
           <input type="checkbox" />
           <br />
-          <button onClick={props.getCount}>confirm</button>
+          <div className="formConfirmButton">
+            <button onClick={props.getCount}>confirm</button>
+          </div>
         </p>
       </form>
       <div className="imageContainer"></div>
