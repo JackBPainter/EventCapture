@@ -1,7 +1,11 @@
+import React from 'react';
 
 
-const MailDispatch = () => {
-    
+const MailDispatch = props => {
+    return (
+        <div>
+        </div>
+    )
 }
 
 export default MailDispatch;

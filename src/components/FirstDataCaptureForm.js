@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/akkrooLogo.png";
 import arrow from "../images/arrow.png";
 
 const FirstDataCaptureForm = props => {
+  const [emailText, setEmailText] = useState('');
   return (
     <div className="FirstDataCaptureForm">
       <div className="imageContainer">
@@ -11,16 +12,18 @@ const FirstDataCaptureForm = props => {
       <br />
       <div className="componentHeaders">
         <h2>
-          Hello Name {props.name}, <br /> Please confirm your email
+          Hello {props.name}, <br /> please enter email
         </h2>
       </div>
       <form className="DataForm">
         <p className="emailInput">
           <input 
             type="email" 
-            placeholder={props.email ? props.email : "Please enter your email"} 
+            placeholder="Please enter your email"
+            value={props.email || emailText} 
+            onChange={(e => setEmailText(e.target.value))}
           />
-          <button>Confirm</button>
+          <button onClick={props.getCount}>Confirm</button>
         </p>
       </form>
       <div className="imageContainer">

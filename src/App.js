@@ -1,20 +1,40 @@
-import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import React, { useState } from 'react';
 import EventAttendeeList from './components/EventAttendeeList';
 import FirstDataCaptureForm from './components/FirstDataCaptureForm';
 import SecondDataCaptureForm from './components/SecondDataCaptureForm';
 import MailDispatch from './components/MailDispatch';
 import Thanks from './components/Thanks';
 import Save from './components/Save';
+import Reset from './components/Reset';
 
 const App = () => {
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [postcode, setPostcode] = useState('');
+  const [optIn, setOptIn] = useState('');
+
+  const getCount = (props) => {
+    setName(props.name);  
+    if (props.email) setEmail(props.email);
+    setCount(count + 1);
+}
+  const resetCount = () => {
+    setCount(0);
+  }
+
+  const components = [
+    <EventAttendeeList getCount={getCount} />,
+    <FirstDataCaptureForm name={name} email={email} getCount={getCount} />,
+    <SecondDataCaptureForm getCount={getCount} />,
+    <Thanks resetCount={resetCount} />
+  ];
+
   return (
     <div className="App">
-    <BrowserRouter>
       <div>
-        <Route path="/" exact component={EventAttendeeList}></Route>
+        {components[count]}
       </div>
-    </BrowserRouter>
     </div>
   );
 }

@@ -8,20 +8,24 @@ const SecondDataCaptureForm = props => {
         <img className="logo" src={logo} alt="Akkroo Logo" />
       </div>
       <div className="componentHeaders">
-        <h2></h2>
+        <h2>
+          Please confirm your postcode and let us know if you're happy to
+          receive promotional emails
+        </h2>
       </div>
       <form className="DataForm">
         <p className="emailInput">
-          <input 
-            type="string" 
-            pattern="^(GIR 0AA)|((([A-Z][0-9]{1,2})|(([A-Z][A-HJ-Y][0-9]{1,2})|(([A-Z][0-9][A-Z])|([A-Z][A-HJ-Y][0-9]?[A-Z]))))[0-9][A-Z]{2})$" 
-            placeholder="Please enter your postcode" 
+          <input
+            type="string"
+            pattern="(GIR 0AA|[A-PR-UWYZ]([0-9][0-9A-HJKPS-UW]?|[A-HK-Y][0-9][0-9ABEHMNPRV-Y]?) [0-9][ABD-HJLNP-UW-Z]{2})"
+            placeholder="Please enter postcode"
           />
-        <button>confirm</button>
+          <input type="checkbox" />
+          <br />
+          <button onClick={props.getCount}>confirm</button>
         </p>
       </form>
-      <div className="imageContainer">
-      </div>
+      <div className="imageContainer"></div>
     </div>
   );
 };

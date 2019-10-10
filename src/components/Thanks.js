@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/akkrooLogo.png";
 
-const Thanks = () => {
+const Thanks = props => {
   return (
     <div>
       <div>
@@ -10,6 +10,7 @@ const Thanks = () => {
         </div>
         <div className="componentHeaders">
           <h2>Thanks for signing up!</h2>
+          <button onClick={props.resetCount}>complete</button>
         </div>
       </div>
     </div>
