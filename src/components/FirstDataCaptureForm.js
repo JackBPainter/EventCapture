@@ -21,7 +21,7 @@ const FirstDataCaptureForm = props => {
           <input 
             type="email" 
             placeholder="Please enter your email"
-            value={props.email || emailText} 
+            defaultValue={props.email || emailText} 
             onChange={(e => setEmailText(e.target.value))}
           />
           <SecondButton handleClick2={props.getCount} />
