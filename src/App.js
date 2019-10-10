@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
     <BrowserRouter>
       <div>
-        <Route path="/" exact component={FirstDataCaptureForm}></Route>
+        <Route path="/" exact component={EventAttendeeList}></Route>
       </div>
     </BrowserRouter>
     </div>
