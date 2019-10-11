@@ -25,7 +25,7 @@ const FirstDataCaptureForm = props => {
             defaultValue={props.email || emailText} 
             onChange={(e => setEmailText(e.target.value))}
           />
-          <SecondConfirm handleSecondConfirm={props.getEmail} />
+          <SecondConfirm handleSecondConfirm={props.getEmail} emailText={emailText} />
         </div>
       </form>
       <div className="formConfirmButton">

@@ -21,9 +21,11 @@ const App = () => {
     setCount(count + 1);
   };
 
-  const getEmail = props => {
+  const getEmail = (e, props) => { 
+    debugger;
+    e.preventDefault();
     setConfirmedEmail(props.emailText);
-    setCount(count)
+    console.log(count);
   };
 
   const countSetter = () => {
