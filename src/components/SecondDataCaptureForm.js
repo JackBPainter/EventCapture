@@ -15,7 +15,7 @@ const SecondDataCaptureForm = props => {
         </h2>
       </div>
       <form className="DataForm">
-        <p className="emailInput">
+        <div className="emailInput">
           <input
             className="postcode"
             type="string"
@@ -27,7 +27,7 @@ const SecondDataCaptureForm = props => {
           <div className="formConfirmButton">
             <NextPageButton nextPage={props.countSetter} />
           </div>
-        </p>
+        </div>
       </form>
       <div className="imageContainer"></div>
     </div>
