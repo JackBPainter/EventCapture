@@ -1,5 +1,5 @@
 import React from "react";
-import Button from './Button';
+import Button from './buttonComponents/Button';
 
 import logo from "../images/akkrooLogo.png";
 import guestList from "../data/example_data.json";
@@ -20,7 +20,7 @@ const EventAttendeeList = (props) => {
           <div className="attendees">
               {guestList.guestList
                 .map((person, index) => 
-                <Button buttonKey={person.name + index} key={person.name + index} email={person.email} handleClick={props.getCount} name={person.name} /> )}
+                <Button key={person.name + index} email={person.email} handleClick={props.getCount} name={person.name} /> )}
           </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 import React from "react";
-import logo from "../images/akkrooLogo.png";
+import logo from "../images/akkrooLogo.png"; 
+import Save from './Save';
 
 const Thanks = props => {
+  console.log(props.name)
   return (
     <div>
       <div>
@@ -12,7 +14,7 @@ const Thanks = props => {
           <h2>Thanks for signing up!</h2>
         </div>
         <div className="formConfirmButton">
-            <button onClick={props.resetCount}>complete</button>
+            <button onClick={props.resetCount}> complete</button>
           </div>
       </div>
     </div>

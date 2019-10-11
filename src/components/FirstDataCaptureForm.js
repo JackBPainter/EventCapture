@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../images/akkrooLogo.png";
-import SecondButton from "./SecondButton";
+import NextPageButton from "./buttonComponents/NextPageButton";
 
 const FirstDataCaptureForm = props => {
   const [emailText, setEmailText] = useState('');
@@ -16,18 +16,18 @@ const FirstDataCaptureForm = props => {
         </h2>
       </div>
       <form className="DataForm">
-        <p className="emailInput">
+        <div className="emailInput">
           <input 
             type="email" 
             placeholder="Please enter your email"
             defaultValue={props.email || emailText} 
             onChange={(e => setEmailText(e.target.value))}
           />
-          <SecondButton handleClick2={props.getCount} confirmedEmail={props.defaultValue} />
-        </p>
+          <button>confirm</button>
+        </div>
       </form>
       <div className="formConfirmButton">
-        <button handleClick2={props.getCount}>next</button>
+      <NextPageButton nextPage={props.countSetter} />
       </div>
     </div>
   );

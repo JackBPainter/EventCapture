@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../images/akkrooLogo.png";
+import NextPageButton from "./buttonComponents/NextPageButton";
 
 const SecondDataCaptureForm = props => {
   return (
@@ -24,7 +25,7 @@ const SecondDataCaptureForm = props => {
           <input type="checkbox" />
           <br />
           <div className="formConfirmButton">
-            <button onClick={props.getCount}>confirm</button>
+            <NextPageButton nextPage={props.countSetter} />
           </div>
         </p>
       </form>

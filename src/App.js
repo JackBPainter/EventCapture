@@ -1,44 +1,50 @@
-import React, { useState } from 'react';
-import EventAttendeeList from './components/EventAttendeeList';
-import FirstDataCaptureForm from './components/FirstDataCaptureForm';
-import SecondDataCaptureForm from './components/SecondDataCaptureForm';
-import MailDispatch from './components/MailDispatch';
-import Thanks from './components/Thanks';
-import Save from './components/Save';
-import Reset from './components/Reset';
+import React, { useState } from "react";
+import EventAttendeeList from "./components/EventAttendeeList";
+import FirstDataCaptureForm from "./components/FirstDataCaptureForm";
+import SecondDataCaptureForm from "./components/SecondDataCaptureForm";
+import MailDispatch from "./components/MailDispatch";
+import Thanks from "./components/Thanks";
+import Save from "./components/Save";
+import Reset from "./components/Reset";
 
 const App = () => {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [confirmedEmail, setConfirmedEmail] = useState('');
-  const [postcode, setPostcode] = useState('');
-  const [optIn, setOptIn] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [confirmedEmail, setConfirmedEmail] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [optIn, setOptIn] = useState("");
 
-  const getCount = (props) => {
-    setName(props.name);  
+  const getCount = props => {
+    setName(props.name);
     if (props.email) setEmail(props.email);
-    setConfirmedEmail();
     setCount(count + 1);
-}
+  };
+
+  const firstFormCount = props => {
+    setConfirmedEmail(props.emailText);
+  };
+
+  const countSetter = () => {
+    setCount(count + 1);
+  };
+
   const resetCount = () => {
     setCount(0);
-  }
+  };
 
   const components = [
     <EventAttendeeList getCount={getCount} />,
-    <FirstDataCaptureForm name={name} email={email} getCount={getCount} />,
-    <SecondDataCaptureForm getCount={getCount} />,
+    <FirstDataCaptureForm name={name} email={email} firstFormCount={firstFormCount} countSetter={countSetter} />,
+    <SecondDataCaptureForm countSetter={countSetter}/>,
     <Thanks resetCount={resetCount} />
   ];
 
   return (
     <div className="App">
-      <div>
-        {components[count]}
-      </div>
+      <div>{components[count]}</div>
     </div>
   );
-}
+};
 
 export default App;
