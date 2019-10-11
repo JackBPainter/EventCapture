@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import logo from "../images/akkrooLogo.png";
+
+import SecondConfirm from "./buttonComponents/SecondConfirm";
 import NextPageButton from "./buttonComponents/NextPageButton";
 
 const FirstDataCaptureForm = props => {
@@ -23,7 +25,7 @@ const FirstDataCaptureForm = props => {
             defaultValue={props.email || emailText} 
             onChange={(e => setEmailText(e.target.value))}
           />
-          <button>confirm</button>
+          <SecondConfirm handleSecondConfirm={props.getEmail} />
         </div>
       </form>
       <div className="formConfirmButton">

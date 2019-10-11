@@ -21,8 +21,9 @@ const App = () => {
     setCount(count + 1);
   };
 
-  const firstFormCount = props => {
+  const getEmail = props => {
     setConfirmedEmail(props.emailText);
+    setCount(count)
   };
 
   const countSetter = () => {
@@ -35,7 +36,7 @@ const App = () => {
 
   const components = [
     <EventAttendeeList getCount={getCount} />,
-    <FirstDataCaptureForm name={name} email={email} firstFormCount={firstFormCount} countSetter={countSetter} />,
+    <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
     <SecondDataCaptureForm countSetter={countSetter}/>,
     <Thanks resetCount={resetCount} />
   ];

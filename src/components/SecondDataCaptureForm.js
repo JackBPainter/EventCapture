@@ -25,11 +25,13 @@ const SecondDataCaptureForm = props => {
           <input type="checkbox" />
           <br />
           <div className="formConfirmButton">
-            <NextPageButton nextPage={props.countSetter} />
+          <button>confirm button component</button>
           </div>
         </div>
       </form>
-      <div className="imageContainer"></div>
+      <div className="imageContainer">
+      <NextPageButton nextPage={props.countSetter} />
+      </div>
     </div>
   );
 };
