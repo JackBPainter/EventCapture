@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../images/akkrooLogo.png";
+
+import ThirdConfirm from "./buttonComponents/ThirdConfirm";
 import NextPageButton from "./buttonComponents/NextPageButton";
 
 const SecondDataCaptureForm = props => {
@@ -25,7 +27,7 @@ const SecondDataCaptureForm = props => {
           <input type="checkbox" />
           <br />
           <div className="formConfirmButton">
-          <button>confirm button component</button>
+          <ThirdConfirm />
           </div>
         </div>
       </form>
