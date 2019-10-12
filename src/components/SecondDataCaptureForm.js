@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/akkrooLogo.png";
 
-import ThirdConfirm from "./buttonComponents/ThirdConfirm";
+import SecondConfirm from "./buttonComponents/SecondConfirm";
 import NextPageButton from "./buttonComponents/NextPageButton";
 
 const SecondDataCaptureForm = props => {
+  const [post, setPost] = useState('');
+  const [opt, setOpt] = useState(false)
   return (
     <div className="SecondDataCaptureForm">
       <div className="imageContainer">
@@ -21,16 +23,22 @@ const SecondDataCaptureForm = props => {
           <input
             className="postcode"
             type="string"
-            pattern="(GIR 0AA|[A-PR-UWYZ]([0-9][0-9A-HJKPS-UW]?|[A-HK-Y][0-9][0-9ABEHMNPRV-Y]?) [0-9][ABD-HJLNP-UW-Z]{2})"
             placeholder="Please enter postcode"
+            value=''
+            pattern="(GIR 0AA|[A-PR-UWYZ]([0-9][0-9A-HJKPS-UW]?|[A-HK-Y][0-9][0-9ABEHMNPRV-Y]?) [0-9][ABD-HJLNP-UW-Z]{2})"
+            onChange={(e => setPost(e.target.value))}
           />
-          <input type="checkbox" />
+          <input 
+            type="checkbox" 
+            onChange={(e => setOpt(e.currentTarget.checked))}
+          />
           <br />
           <div className="formConfirmButton">
-          <ThirdConfirm />
+          <SecondConfirm handleSecondConfirm={props.getPostOpt} post={post} opt={opt} />
           </div>
         </div>
       </form>
+      {console.log(opt)}
       <div className="imageContainer">
       <NextPageButton nextPage={props.countSetter} />
       </div>

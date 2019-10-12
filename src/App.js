@@ -22,11 +22,15 @@ const App = () => {
   };
 
   const getEmail = (e, props) => { 
-    debugger;
     e.preventDefault();
     setConfirmedEmail(props.emailText);
-    console.log(count);
   };
+
+  const getPostOpt = (e, props) => {
+    e.preventDefault();
+    setPostcode(props.post);
+    setOptIn(props.opt);
+  }
 
   const countSetter = () => {
     setCount(count + 1);
@@ -39,7 +43,7 @@ const App = () => {
   const components = [
     <EventAttendeeList getCount={getCount} />,
     <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
-    <SecondDataCaptureForm countSetter={countSetter}/>,
+    <SecondDataCaptureForm countSetter={countSetter} getPostOpt={getPostOpt} />,
     <Thanks resetCount={resetCount} />
   ];
 
