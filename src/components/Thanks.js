@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../images/akkrooLogo.png"; 
 
 const Thanks = props => {
-  console.log(props.name)
+  console.log(props.confirmedEmail)
   return (
     <div>
       <div>

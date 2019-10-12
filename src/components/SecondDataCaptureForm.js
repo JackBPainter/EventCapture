@@ -24,7 +24,7 @@ const SecondDataCaptureForm = props => {
             className="postcode"
             type="string"
             placeholder="Please enter postcode"
-            value=''
+            value={post}          
             pattern="(GIR 0AA|[A-PR-UWYZ]([0-9][0-9A-HJKPS-UW]?|[A-HK-Y][0-9][0-9ABEHMNPRV-Y]?) [0-9][ABD-HJLNP-UW-Z]{2})"
             onChange={(e => setPost(e.target.value))}
           />

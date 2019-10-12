@@ -6,6 +6,7 @@ import MailDispatch from "./components/MailDispatch";
 import Thanks from "./components/Thanks";
 import Save from "./components/Save";
 import Reset from "./components/Reset";
+import { async } from "q";
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ const App = () => {
   const getEmail = (e, props) => { 
     e.preventDefault();
     setConfirmedEmail(props.emailText);
+    console.log(confirmedEmail);
   };
 
   const getPostOpt = (e, props) => {
@@ -44,7 +46,7 @@ const App = () => {
     <EventAttendeeList getCount={getCount} />,
     <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
     <SecondDataCaptureForm countSetter={countSetter} getPostOpt={getPostOpt} />,
-    <Thanks resetCount={resetCount} />
+    <Thanks resetCount={resetCount} confirmedEmail={confirmedEmail} />
   ];
 
   return (

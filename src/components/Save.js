@@ -1,6 +1,6 @@
 
 const Save = props => {
-    console.log(props.name, props.confirmedEmail, props.postcode, props.optIn)
+    console.log(props.confirmedEmail)
 }
 
 export default Save;

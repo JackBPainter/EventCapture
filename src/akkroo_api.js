@@ -1,4 +1,4 @@
-(function(window) {
+const sendEmail = (function(window) {
 	window.AkkrooAPI = {};
 	// Email API
 	// ========
@@ -26,5 +26,6 @@
 			return true;
 		}, 1);
 	}
-}(window));
+});
 
+export default sendEmail;
