@@ -14,7 +14,7 @@ const App = () => {
   const [email, setEmail] = useState("");
   const [confirmedEmail, setConfirmedEmail] = useState("");
   const [postcode, setPostcode] = useState("");
-  const [optIn, setOptIn] = useState("");
+  const [optIn, setOptIn] = useState(false);
 
   const getCount = props => {
     setName(props.name);
@@ -25,14 +25,14 @@ const App = () => {
   const getEmail = (e, props) => { 
     e.preventDefault();
     setConfirmedEmail(props.emailText);
-    console.log(confirmedEmail);
   };
 
   const getPostOpt = (e, props) => {
     e.preventDefault();
     setPostcode(props.post);
-    setOptIn(props.opt);
-  }
+    const optIn = (props.opt);
+    setOptIn(optIn);
+  };
 
   const countSetter = () => {
     setCount(count + 1);
@@ -46,7 +46,7 @@ const App = () => {
     <EventAttendeeList getCount={getCount} />,
     <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
     <SecondDataCaptureForm countSetter={countSetter} getPostOpt={getPostOpt} />,
-    <Thanks resetCount={resetCount} confirmedEmail={confirmedEmail} />
+    <Thanks resetCount={resetCount} name={name} confirmedEmail={confirmedEmail} postcode={postcode} optIn={optIn} />
   ];
 
   return (

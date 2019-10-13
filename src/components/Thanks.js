@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../images/akkrooLogo.png"; 
 
 const Thanks = props => {
-  console.log(props.confirmedEmail)
   return (
     <div>
       <div>
@@ -13,7 +12,7 @@ const Thanks = props => {
           <h2>Thanks for signing up!</h2>
         </div>
         <div className="formConfirmButton">
-            <button className="nextPageButton" onClick={props.resetCount}>complete</button>
+            <button className="nextPageButton" onClick={props.resetCount}>Reset</button>
           </div>
       </div>
     </div>

@@ -37,7 +37,6 @@ const SecondDataCaptureForm = props => {
           </div>
         </div>
       </form>
-      {console.log(opt)}
       <div className="imageContainer">
       <button className="nextPageButton" onClick={props.countSetter}>Next</button>
       </div>
