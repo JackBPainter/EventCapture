@@ -38,7 +38,7 @@ const App = () => {
     setCount(count + 1);
   };
 
-  const resetCount = () => {
+  const reset = () => {
     setCount(0);
     setName("");
     setEmail("");
@@ -52,7 +52,7 @@ const App = () => {
     <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
     <SecondDataCaptureForm countSetter={countSetter} getPostOpt={getPostOpt} />,
     <Thanks countSetter={countSetter} name={name} confirmedEmail={confirmedEmail} postcode={postcode} optIn={optIn} />,
-    <Reset resetCount={resetCount}/>,
+    <Reset reset={reset}/>,
   ];
 
   return (

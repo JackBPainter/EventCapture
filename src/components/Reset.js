@@ -11,7 +11,7 @@ const Reset = props => {
 
       </div>
       <div className="formConfirmButton">
-        <button className="nextPageButton" onClick={props.resetCount}>Reset</button>
+        <button className="nextPageButton" onClick={props.reset}>Reset</button>
       </div>
     </div>
   );
