@@ -20,8 +20,8 @@ const FirstDataCaptureForm = props => {
         <div className="emailInput">
           <input 
             type="email" 
-            placeholder="Please enter your email"
-            defaultValue={props.email || emailText} 
+            placeholder={props.email} 
+            defaultValue={emailText}
             onChange={(e => setEmailText(e.target.value))}
           />
           <SecondConfirm handleSecondConfirm={props.getEmail} emailText={emailText} />

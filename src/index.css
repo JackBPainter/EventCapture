@@ -30,10 +30,11 @@
   border:none;
   position:relative;
   height: 6vw;
-  font-size: 1.6em;
+  font-size: 4vw;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
+  margin-bottom: 1vw;
 }
 
 .nextPageButton:hover{
