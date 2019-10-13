@@ -8,10 +8,10 @@ const Reset = props => {
         <img className="logo" src={logo} alt="Akkroo Logo" />
       </div>
       <div className="componentHeaders">
-        <h2>Thanks for attending todays event!</h2>
+
       </div>
       <div className="formConfirmButton">
-        <button className="nextPageButton" onClick={props.countSetter}>Next</button>
+        <button className="nextPageButton" onClick={props.resetCount}>Reset</button>
       </div>
     </div>
   );

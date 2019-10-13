@@ -40,14 +40,19 @@ const App = () => {
 
   const resetCount = () => {
     setCount(0);
+    setName("");
+    setEmail("");
+    setConfirmedEmail("");
+    setPostcode("");
+    setOptIn("");
   };
 
   const components = [
-    <Reset countSetter={countSetter} />,
     <EventAttendeeList getCount={getCount} />,
     <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
     <SecondDataCaptureForm countSetter={countSetter} getPostOpt={getPostOpt} />,
-    <Thanks resetCount={resetCount} name={name} confirmedEmail={confirmedEmail} postcode={postcode} optIn={optIn} />
+    <Thanks countSetter={countSetter} name={name} confirmedEmail={confirmedEmail} postcode={postcode} optIn={optIn} />,
+    <Reset resetCount={resetCount}/>,
   ];
 
   return (

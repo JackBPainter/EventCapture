@@ -13,7 +13,7 @@ const EventAttendeeList = (props) => {
         </div>
         <div className="componentHeaders">
           <h2>
-            Could you let us know who you are?
+            Thanks for attending todays event, <br /> Could you let us know who you are?
           </h2>
         </div>
           <div className="attendees">
