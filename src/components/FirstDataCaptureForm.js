@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import logo from "../images/akkrooLogo.png";
 
 import SecondConfirm from "./buttonComponents/SecondConfirm";
-import NextPageButton from "./buttonComponents/NextPageButton";
 
 const FirstDataCaptureForm = props => {
   const [emailText, setEmailText] = useState('');
@@ -29,7 +28,7 @@ const FirstDataCaptureForm = props => {
         </div>
       </form>
       <div className="formConfirmButton">
-      <NextPageButton nextPage={props.countSetter} />
+      <button className="nextPageButton" onClick={props.countSetter}>Next</button>
       </div>
     </div>
   );
