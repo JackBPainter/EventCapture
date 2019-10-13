@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+
+import Reset from "./components/Reset";
 import EventAttendeeList from "./components/EventAttendeeList";
 import FirstDataCaptureForm from "./components/FirstDataCaptureForm";
 import SecondDataCaptureForm from "./components/SecondDataCaptureForm";
 import MailDispatch from "./components/MailDispatch";
 import Thanks from "./components/Thanks";
 import Save from "./components/Save";
-import Reset from "./components/Reset";
-import { async } from "q";
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -43,6 +43,7 @@ const App = () => {
   };
 
   const components = [
+    <Reset countSetter={countSetter} />,
     <EventAttendeeList getCount={getCount} />,
     <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
     <SecondDataCaptureForm countSetter={countSetter} getPostOpt={getPostOpt} />,
