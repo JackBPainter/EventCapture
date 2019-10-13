@@ -1,9 +1,19 @@
+import React from "react";
+import logo from "../images/akkrooLogo.png";
+
+import SaveConfirm from "./buttonComponents/SaveConfirm";
 
 const Save = props => {
-    console.log(props.name)
-    console.log(props.confirmedEmail)
-    console.log(props.postcode)
-    console.log(props.optIn)
-}
+  return (
+    <div>
+      <div className="imageContainer">
+        <img className="logo" src={logo} alt="Akkroo Logo" />
+      </div>
+      <div className="formConfirmButton">
+        <SaveConfirm handleSaveConfirm={props.save} />
+      </div>
+    </div>
+  );
+};
 
 export default Save;

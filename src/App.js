@@ -34,6 +34,15 @@ const App = () => {
     setOptIn(optIn);
   };
 
+  const save = (e) => {
+    e.preventDefault();
+    console.log(name);
+    console.log(confirmedEmail);
+    console.log(postcode);
+    console.log(optIn);
+    setCount(count + 1);;
+  };
+
   const countSetter = () => {
     setCount(count + 1);
   };
@@ -52,6 +61,7 @@ const App = () => {
     <FirstDataCaptureForm name={name} email={email} getEmail={getEmail} countSetter={countSetter} />,
     <SecondDataCaptureForm countSetter={countSetter} getPostOpt={getPostOpt} />,
     <Thanks countSetter={countSetter} name={name} confirmedEmail={confirmedEmail} postcode={postcode} optIn={optIn} />,
+    <Save save={save}  />,
     <Reset reset={reset}/>,
   ];
 
