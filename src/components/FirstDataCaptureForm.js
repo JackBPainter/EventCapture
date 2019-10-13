@@ -14,7 +14,7 @@ const FirstDataCaptureForm = props => {
       <br />
       <div className="componentHeaders">
         <h2>
-          Hello {props.name}, <br /> please enter email
+          Hello {props.name}, <br /> please confirm your email
         </h2>
       </div>
       <form className="DataForm">

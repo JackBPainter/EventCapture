@@ -3,7 +3,7 @@ import React from "react";
 const NextPageButton = (props) => {
     return (
         <>
-            <button onClick={() => props.nextPage(props)}>Next Page</button>
+            <button className="nextPageButton" onClick={() => props.nextPage(props)}>Next Page</button>
         </>
     );
 }

@@ -13,7 +13,7 @@ const Thanks = props => {
           <h2>Thanks for signing up!</h2>
         </div>
         <div className="formConfirmButton">
-            <button onClick={props.resetCount}>complete</button>
+            <button className="nextPageButton" onClick={props.resetCount}>complete</button>
           </div>
       </div>
     </div>
