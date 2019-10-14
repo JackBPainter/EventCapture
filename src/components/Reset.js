@@ -7,8 +7,6 @@ const Reset = props => {
       <div className="imageContainer">
         <img className="logo" src={logo} alt="Akkroo Logo" />
       </div>
-      <div className="componentHeaders">
-      </div>
       <div className="formConfirmButton">
         <button className="nextPageButton" onClick={props.reset}>Reset</button>
       </div>

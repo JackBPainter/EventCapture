@@ -13,14 +13,14 @@ const SecondDataCaptureForm = props => {
       </div>
       <div className="componentHeaders">
         <h2>
-          Please confirm your postcode and let us know <br />if you're happy to
+          Please enter your postcode and let us know <br />if you're happy to
           receive promotional emails
         </h2>
       </div>
       <form className="DataForm">
         <div className="emailInput">
           <input
-            className="postcode"
+            className="textInput"
             type="string"
             placeholder="Please enter postcode"
             value={post}          
@@ -28,6 +28,7 @@ const SecondDataCaptureForm = props => {
             onChange={(e => setPost(e.target.value))}
           />
           <input 
+            className="checkboxInput"
             type="checkbox" 
             onChange={(e => setOpt(e.currentTarget.checked))}
           />
